@@ -1,0 +1,4 @@
+# ninja log v5
+1	3492	1635582872	/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/DeformableTransformerResNet/ops/build/temp.linux-x86_64-3.7/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/DeformableTransformerResNet/ops/src/cpu/ms_deform_attn_cpu.o	bd71f4b196dd49a1
+1	13219	1635582882	/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/DeformableTransformerResNet/ops/build/temp.linux-x86_64-3.7/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/DeformableTransformerResNet/ops/src/cuda/ms_deform_attn_cuda.o	19aa6605e7a241a8
+0	19805	1635582889	/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/DeformableTransformerResNet/ops/build/temp.linux-x86_64-3.7/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/DeformableTransformerResNet/ops/src/vision.o	c6b45483924fb99f

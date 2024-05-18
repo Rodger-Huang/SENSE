@@ -1,0 +1,10 @@
+setup.py
+/DATA/disk1/packnet_discriminator/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/tree_filter.cpp
+/DATA/disk1/packnet_discriminator/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/bfs/bfs.cu
+/DATA/disk1/packnet_discriminator/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/mst/boruvka.cpp
+/DATA/disk1/packnet_discriminator/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/mst/mst.cu
+/DATA/disk1/packnet_discriminator/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/refine/refine.cu
+tree_filter.egg-info/PKG-INFO
+tree_filter.egg-info/SOURCES.txt
+tree_filter.egg-info/dependency_links.txt
+tree_filter.egg-info/top_level.txt

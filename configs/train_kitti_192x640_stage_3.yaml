@@ -1,0 +1,76 @@
+model:
+    name: 'SelfSupModel'
+    optimizer:
+        name: 'Adam'
+        depth:
+            lr: 0.0002
+        pose:
+            lr: 0.0002
+    scheduler:
+        name: 'MultiStepLR' # 'StepLR'
+        step_size: 1 # 20 # 30
+        milestones: [5,]
+        gamma: 0.1
+    depth_net:
+        name: 'seg_hrnet'
+        version: '50pt'
+        paths: ['packnet_sfm.networks.depth.HRNet']
+        mode: 'deformable SGDepth'
+        checkpoint_path: 'checkpoint/pretrained/hrnet/hrnetv2_w48_imagenet_pretrained.pth'
+    pose_net:
+        name: 'PoseResNet'
+        version: '18pt'
+        # name: 'PoseNet'
+        # version: '18pt'
+    params:
+        crop: 'garg'
+        min_depth: 0.0
+        max_depth: 80.0
+    loss:
+        photometric_reduce_op: 'min' # 'mean'
+        automask_loss: True # False
+        num_scales: 3
+        pseudo_loss_weight: 0. # 0.1
+        stage: 3
+    checkpoint_path: [checkpoint_path.ckpt]
+datasets:
+    augmentation:
+        image_shape: (192, 640)
+    train:
+        batch_size: 16
+        dataset: ['KITTI']
+        path: ['./data/datasets/KITTI_raw']
+        split: ['data_splits/eigen_zhou_files.txt']
+        depth_type: ['velodyne']
+        repeat: [1] # [2]
+        num_workers: 16
+        pseudo_label_path: ''
+    validation:
+        dataset: ['KITTI']
+        path: ['./data/datasets/KITTI_raw']
+        split: ['data_splits/eigen_val_files.txt',
+                'data_splits/eigen_test_files.txt']
+        depth_type: ['velodyne']
+    test:
+        dataset: ['KITTI']
+        path: ['./data/datasets/KITTI_raw']
+        split: ['data_splits/eigen_test_files.txt']
+        depth_type: ['velodyne']
+
+wandb:
+    dry_run: True # False                          # Wandb dry-run (not logging)
+    name: 'HiDNet_192_640_SENSE_stage_3'           # Wandb run name
+    project: os.environ.get("WANDB_PROJECT", "")   # Wandb project
+    entity: os.environ.get("WANDB_PROJECT", "")    # Wandb entity
+    tags: []                                       # Wandb tags
+    dir: './wandb'                                 # Wandb save folder
+checkpoint:
+    s3_path: ''       # s3 path for AWS model syncing
+    s3_frequency: 1   # How often to s3 sync
+    filepath: './checkpoint'
+    monitor: 'abs_rel_pp_gt'
+    monitor_index: 0
+    mode: 'min'
+    save_top_k: 10
+arch:
+    max_epochs: 10

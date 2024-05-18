@@ -1,0 +1,37 @@
+model:
+    name: 'SelfSupModel'
+    depth_net:
+        name: 'seg_hrnet'
+        version: '50pt'
+        paths: ['packnet_sfm.networks.depth.HRNet']
+        mode: 'deformable SGDepth'
+        checkpoint_path: 'checkpoint/pretrained/hrnet/hrnetv2_w48_imagenet_pretrained.pth'
+    pose_net:
+        name: 'PoseResNet' # 'PoseNet'
+        version: '18pt'
+    params:
+        # crop: ''
+        crop: 'garg'
+        min_depth: 0.0
+        max_depth: 80.0
+    loss:
+        stage: 1
+datasets:
+    augmentation:
+        image_shape: (192, 640)
+    test:
+        dataset: ['KITTI']
+        path: ['./data/datasets/KITTI_raw']
+        # split: ['data_splits/eigen_test_files.txt']
+        split: ['data_splits/eigen_zhou_files.txt']
+        back_context: 1
+        forward_context: 1
+        depth_type: ['velodyne']
+        # depth_type: ['groundtruth']
+save:
+    folder: 'data/HiDNet_192_640'
+    depth:
+        rgb: False # True
+        viz: False
+        npz: True
+        png: False

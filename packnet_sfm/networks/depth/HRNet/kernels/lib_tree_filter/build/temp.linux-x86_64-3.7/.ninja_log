@@ -1,0 +1,6 @@
+# ninja log v5
+0	218	1635126592	/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/build/temp.linux-x86_64-3.7/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/mst/boruvka.o	72838ff25b5d247d
+5	46174	1635126638	/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/build/temp.linux-x86_64-3.7/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/bfs/bfs.o	ba210d7aad359000
+32	51508	1635126643	/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/build/temp.linux-x86_64-3.7/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/refine/refine.o	54c236d7895c4e2b
+17	51668	1635126643	/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/build/temp.linux-x86_64-3.7/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/mst/mst.o	7ace2418214ce8a3
+38	76922	1635126668	/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/build/temp.linux-x86_64-3.7/data0/huangricong/Data/packnet-sfm/packnet_sfm/networks/depth/HRNet/kernels/lib_tree_filter/src/tree_filter.o	a443033f8d32ade5

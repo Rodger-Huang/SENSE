@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: cvpods
+Version: 0.1
+Summary: cvpods is Megvii's next-generation research platform for object detection and segmentation based on cvpods.
+Home-page: UNKNOWN
+Author: BaseDetection@MegviiResearch
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
